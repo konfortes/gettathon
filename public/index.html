@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"></link> -->
+        <link rel="stylesheet" type="text/css" href="css/site.css"></link>
+    </head>
+    <body ng-app="gettathon" ng-controller="ApplicationController">
+      
+        <div class="viewPartial" ng-view></div>
+
+
+        <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+        <script type="text/javascript">
+            var ref = new Firebase("https://gettathon.firebaseio.com/rooms");
+            
+            ref.on("child_changed", function(snapshot) {
+                val = snapshot.val();
+                occupiedOrFree = val.occupied ? 'occupied' : 'free'
+                alert('room ' + val.name + ' is now ' + occupiedOrFree);  
+            });
+        </script>
+    </body>
+</html>
