@@ -1,0 +1,24 @@
+.header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.text_occupied {
+  color: red;
+}
+
+.text_free {
+  color: green;
+}
+
+.centered-table {
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container img {
+    width: 200px;
+    height: 250px;
+}
