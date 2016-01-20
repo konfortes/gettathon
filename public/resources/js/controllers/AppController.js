@@ -14,8 +14,10 @@
         });
 
         function initRooms(rooms) {
-            var occupied = rooms['b'].occupied
-            $scope.roomBSrc = occupied ? "/resources/img/occupied.png" : "/resources/img/free.png"
+            $scope.roomASrc = rooms['a'].occupied ? "/resources/img/occupied.png" : "/resources/img/free.png"
+            $scope.roomBSrc = rooms['b'].occupied ? "/resources/img/occupied.png" : "/resources/img/free.png"
+            $scope.roomCSrc = rooms['c'].occupied ? "/resources/img/occupied.png" : "/resources/img/free.png"
+            $scope.occupiedAll = rooms['a'].occupied && rooms['b'].occupied && rooms['c'].occupied
             $scope.$apply()
         }
     }
