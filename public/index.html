@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"></link> -->
         <link rel="stylesheet" type="text/css" href="resources/css/site.css"></link>
     </head>
     <body ng-app="gettathon" ng-controller="AppController">
         
-    <div class="header text_free">
-        <h2 >
-          You have free room
+    <div class="header">
+        <h2 ng-class="occupiedAll ? 'text_occupied' : 'text_free'" >
+          {{headerText}}
         </h2>
         </div>
         <div class="container">
             <table class="centered-table" border="3">
+            <tr>
+              <th>
+                Room-1
+              </th>
+              <th>
+                Room-2
+              </th>
+              <th>
+                Room-3
+              </th>
+            </tr>
             <tr>
               <td>
                 <div class="img-container">
